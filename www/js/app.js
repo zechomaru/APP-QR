@@ -28,10 +28,10 @@ angular.module('starter', ['ionic'])
     }
 
     $scope.scanear=function(){
+                window.location.replace("qr.html");
         cordova.plugins.barcodeScanner.scan(
             function (result) {  
                 var codigoQR=result.text;
-                window.location.replace("qr.html");
                 $('#resultado').html(codigoQR);
             }, 
             function (error) {
